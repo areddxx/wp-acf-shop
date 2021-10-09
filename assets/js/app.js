@@ -20,3 +20,19 @@
 	});
 
 })(jQuery);
+
+Snipcart.api.theme.customization.registerPaymentFormCustomization({
+	input: {
+	  backgroundColor: 'red',
+	  color: '#303030',
+	  border: '1px solid black',
+	  fontSize: '16px',
+	  placeholder: {
+		color: 'blue',
+	  },
+	},
+	label: {
+	  color: '#fff',
+	  fontSize: '20px',
+	}
+  });

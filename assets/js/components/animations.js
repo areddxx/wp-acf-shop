@@ -30,7 +30,7 @@ import ScrollMagic from 'scrollmagic';
 			var animateScene = new ScrollMagic.Scene({
 				triggerElement: element,
 				duration: 0,
-				reverse: true,
+				reverse: false,
 				triggerHook: triggerHook
 			})
 			.on('start', function() {
@@ -43,7 +43,7 @@ import ScrollMagic from 'scrollmagic';
 		stickyNav: function() {
 			var controller = new ScrollMagic.Controller();
 			var navScene = new ScrollMagic.Scene({
-				triggerElement: '.animate',
+				triggerElement: '.header',
 				duration: 0,
 				reverse: true,
 				triggerHook: 0
@@ -58,6 +58,7 @@ import ScrollMagic from 'scrollmagic';
 			var app = this;
 			app.dom();
 			app.initAnimations();
+			app.stickyNav();
 		}
 	}
 
