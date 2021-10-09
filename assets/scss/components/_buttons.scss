@@ -1,0 +1,78 @@
+.button {
+	background: $color-a;
+	border: 1px solid $color-a;
+	border-radius: 0;
+	color: $white;
+	display: inline-block;
+	font: 600 1rem/0.9 $font-primary;
+	padding: 0.75rem 1.5rem;
+	position: relative;
+	text-align: center;
+	transition: all 0.25s ease;
+
+	&:hover {
+		background: lighten( $color-a, 4% );
+		border: 1px solid lighten( $color-a, 4% );
+	} //&:hover
+
+	&:active,
+	&:focus {
+	    outline: none;
+	} // &:active
+
+	/*
+	* Button variations
+	*/
+	&.button--arrow {
+		background: transparent;
+		border: none;
+		color: $color-a;
+		display: inline-block;
+		font: 600 1.1rem/1.5 $font-primary;
+
+		&:hover {
+			box-shadow: none;
+			opacity: 0.7;
+
+			svg {
+			    transform: translate(0.5rem, 0.33rem);
+			} // evg
+		}
+
+		svg {
+		    height: auto;
+		    margin-left: 0.75rem;
+		    transform: translate(0, 0.3rem);
+		    transition: all 0.25s ease;
+		    width: 20px;
+		} // svg
+
+	} // .button--arrow
+
+} // .button
+
+
+.link {
+	color: $color-a;
+	font: 600 1rem/1.2 $font-primary;
+	letter-spacing: 0.0125rem;
+
+	&.link--arrow {
+
+		&:hover {
+			svg {
+			    transform: translate(0.5rem, 0.33rem);
+			} // svg
+		}
+
+		svg {
+		    height: auto;
+		    margin-left: 0.75rem;
+		    transform: translate(0, 0.3rem);
+		    transition: all 0.25s ease;
+		    width: 20px;
+		} // svg
+
+	} // &.link--arrow
+
+}

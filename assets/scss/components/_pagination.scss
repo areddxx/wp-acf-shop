@@ -1,0 +1,52 @@
+.pagination {
+    @include xy-grid;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 0;
+
+    .page-numbers {
+        width: auto;
+        display: inline-block;
+        text-transform: uppercase;
+        font: 500 1rem/2.8 $font-primary;
+        color: $color-a;
+        border-radius: 0.1rem;
+        letter-spacing: 0.033rem;
+        margin: 0 0.75rem 0;
+        opacity: 0.5;
+
+        &:hover {
+        }
+
+        &.next,
+        &.prev {
+            @include xy-grid;
+            @include flex-align-self(middle);
+            margin: 0;
+
+            svg {
+                @include flex-align-self(middle);
+            } // svg
+        }
+
+        &.next {
+            padding-left: 1rem;
+        } // .next
+
+        &.prev {
+            padding-right: 1rem;
+        } // .prev
+
+
+        &.current {
+            color: $color-a;
+            position: relative;
+            transform: scale(1.33);
+            opacity: 1;
+        }
+
+    }
+    // .page-numbers
+}
+// .pagination

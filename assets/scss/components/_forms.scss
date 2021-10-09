@@ -1,0 +1,115 @@
+form {
+	@include xy-grid;
+
+	p {
+		margin: 0;
+	}
+
+	label {
+		font: 400 0.95rem $font-secondary;
+		color: $color-a;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"] {
+		padding: 0.85rem 1rem;
+		box-sizing: border-box;
+		margin: 0;
+		border: none;
+		box-shadow: 0;
+		background: rgba($color-e, 0.25);
+		border-radius: 3px;
+		width: 100%;
+		transition: all 0.25s ease;
+		font: 400 0.9rem/1.25 $font-secondary;
+		color: $font-body;
+
+		@include placeholder {
+			color: rgba($font-body,0.5);
+			letter-spacing: 0;
+		}
+
+		&:focus,
+		&:active {
+			outline: none;
+
+			@include placeholder {
+			}
+
+		}
+
+	} // input
+
+	textarea {
+		padding: 0.85rem 1rem;
+		box-sizing: border-box;
+		margin: 0;
+		border: none;
+		box-shadow: 0;
+		background: rgba($color-e, 0.25);
+		border-radius: 3px;
+		width: 100%;
+		transition: all 0.25s ease;
+		font: 400 0.9rem/1.25 $font-secondary;
+		color: $font-body;
+
+		@include placeholder {
+			color: rgba($font-body,0.5);
+			letter-spacing: 0;
+		}
+
+		&:focus,
+		&:active {
+			outline: none;
+
+			@include placeholder {
+			}
+
+		}
+
+	}
+
+	select {
+		display: block;
+		width: 100%;
+		padding: 0.85rem 1rem;
+		background: rgba($color-e, 0.25);
+		height: 44px;
+		border: 0;
+		font: 400 0.9rem/1.25 $font-secondary;
+		color: $font-body;
+		text-transform: none;
+		margin: 0;
+		// -webkit-appearance: none;
+		// -moz-appearance: none; // Hides Firefox arrow.
+
+		&:focus {
+			// outline-color: black;
+		    outline-width: medium;
+		}
+
+		&:active {
+			outline: none;
+		}
+
+	}
+
+	input[type="submit"] {
+		margin: 0;
+		background: $color-a;
+		border: 2px solid $color-a;
+		border-radius: 3px;
+		color: $white;
+		display: inline-block;
+		font: 500 1rem/0.9 $font-primary;
+		opacity: 1;
+		padding: 0.75rem 1.5rem;
+		position: relative;
+		text-align: center;
+		transition: all 0.25s ease;
+	}
+
+}

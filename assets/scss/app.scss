@@ -1,0 +1,27 @@
+@charset 'utf-8';
+@import '../../node_modules/normalize.css/normalize.css';
+@import '../../node_modules/foundation-sites/scss/util/util';
+
+@import 'settings';
+@import 'foundation';
+
+@import 'base/all';
+@import 'components/all';
+@import 'layout/all';
+@import 'pages/all';
+@import 'modules/all';
+@import 'utilities/all';
+
+@import '../../node_modules/@fancyapps/ui/dist/fancybox.css';
+
+// Foundation XY Grid: Review README.md.
+@include foundation-xy-grid-classes(
+  $base-grid: true,
+  $margin-grid: true,
+  $padding-grid: true,
+  $block-grid: true,
+  $collapse: true,
+  $offset: true,
+  $vertical-grid: true,
+  $frame-grid: true
+);

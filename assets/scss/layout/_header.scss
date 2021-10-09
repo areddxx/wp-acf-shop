@@ -1,0 +1,28 @@
+$menu-button-color: $color-f;
+$menu-background-color: rgba($color-a, 0.975);
+
+.header {
+	background: $color-a;
+	padding: 0;
+	position: relative;
+	width: 100%;
+	z-index: 9;
+
+	&.mobile-active {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		max-width: none;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 999;
+		background: $menu-background-color;
+		animation-duration: 0.5s;
+		animation-timing-function: ease;
+		animation-name: fadeInOpacity;
+		align-items: flex-start;
+	} // &.mobile-active
+
+}

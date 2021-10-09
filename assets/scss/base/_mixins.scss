@@ -1,0 +1,39 @@
+// ------ Gradient:
+// @include linear-gradient( 90deg, $brand_dark, $brand_dark_alt 1000% );
+
+// Placeholder Text
+// Usage: @include placeholder { ..Styles.. }
+@mixin placeholder {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+&:-moz-placeholder { /* Firefox 18- */
+	@content;
+}
+&::-moz-placeholder {  /* Firefox 19+ */
+	@content;
+}
+&:-ms-input-placeholder {
+	@content;
+}
+::-ms-input-placeholder {
+	@content;
+}
+}
+
+/// Mixin printing a linear-gradient
+/// as well as a plain color fallback
+/// and the `-webkit-` prefixed declaration
+/// @access public
+/// @param {String | List | Angle} $direction - Linear gradient direction
+/// @param {Arglist} $color-stops - List of color-stops composing the gradient
+@mixin linear-gradient($direction, $color-stops...) {
+	@if is-direction($direction) == false {
+		$color-stops: ($direction, $color-stops);
+		$direction: 180deg;
+	}
+
+	background: nth(nth($color-stops, 1), 1);
+	background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+	background: linear-gradient($direction, $color-stops);
+}

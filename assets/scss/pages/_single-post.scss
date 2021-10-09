@@ -1,0 +1,121 @@
+.single.single--post {
+
+	.page-wrap {
+
+	    & > .container {
+	    } // & > .container
+
+	} // .page-wrap
+
+	.content-area {
+		@include xy-cell($size: 12, $gutters: 0);
+	    width: 100%;
+	    padding: 5rem 0 0;
+
+		&.has-sidebar {
+			@include xy-cell($size: 8.5, $gutters: 0);
+			margin: 0;
+
+		    .post {
+		        @include xy-cell($size: 12, $gutters: 0);
+		        margin: 0;
+		    } // .post__article
+
+		} // &.has-sidebar
+
+	} // .content-area
+
+	.sidebar {
+	    // sidebar.scss
+	    padding-top: 5rem;
+	} // .sidebar
+
+	.page-header {
+
+		.page-header__overlay {
+			opacity: 0.75;
+		}
+
+		.page-header__content {
+		}
+
+		.page-header__title {
+		}
+
+		.page-header__subtitle {
+		}
+
+	}
+	//END .page-header
+
+	.post {
+		@include xy-cell($size: 12, $gutters: 0);
+		margin: 0 auto;
+		align-items: flex-start;
+
+		@include breakpoint(small down) {
+		}
+
+	} // .post
+
+	.post__body {
+	    @include xy-cell($size: 11, $gutters: 0);
+	    padding-right: 4rem;
+
+	    @include breakpoint(small down) {
+	    	@include xy-cell($size: 12, $gutters: 0);
+	    	order: 0;
+	    }
+
+	} // .post__article
+
+	.post__share {
+		// assets/scss/components/_post-share.scss
+		@include xy-cell($size: 1, $gutters: 0);
+
+		@include breakpoint(small down) {
+			order: 1;
+			@include xy-cell($size: 10.5, $gutters: 0);
+			margin: 1rem auto 0;
+		}
+
+	} // .post__share
+
+	.post__image {
+	    @include xy-cell($size: 12, $gutters: 0);
+
+	    img {
+	    	display: block;
+	        width: 100%;
+	        height: auto;
+	        margin: 0 auto;
+	    } // img
+
+	} // .post__image
+
+	.post__meta {
+		// /components/post-meta.scss
+	} // .post__meta
+
+	.post__title {
+	    @include xy-cell($size: 12, $gutters: 0);
+	    margin: 1rem 0 1rem;
+
+	    @include breakpoint(small down) {
+	    	@include xy-cell($size: 10.5, $gutters: 0);
+	    	margin: 1rem auto 1rem;
+	    }
+
+	} // .post__title
+
+	.post__content {
+	    @include xy-cell($size: 12, $gutters: 0);
+
+	    @include breakpoint(small down) {
+	    	@include xy-cell($size: 10.5, $gutters: 0);
+	    	margin: 0 auto;
+	    }
+
+	} // .post__content
+
+}

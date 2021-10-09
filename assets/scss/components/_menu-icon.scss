@@ -1,0 +1,113 @@
+$menu-button-color: $color-f;
+$menu-background-color: rgba($color-a, 0.975);
+
+.header {
+
+	.menu-icon {
+		width: 40px;
+		height: 25px;
+		border: none;
+		background: transparent;
+		position: absolute;
+		top: 1.5rem;
+		right: 1.5rem;
+		cursor: pointer;
+		padding: 0;
+		display: none;
+		float: right;
+		cursor: pointer;
+		transition: all 0.5s ease;
+		color: $menu-button-color;
+
+		@include breakpoint(large down) {
+			display: block;
+		}
+
+		&:focus,
+		&:active {
+			outline:none;
+		}
+
+		&:after,
+		&:before,
+		span {
+			width: 100%;
+			height: 3px;
+			border-radius: 100px;
+			position: absolute;
+			display: block;
+			background: $menu-button-color;
+		}
+
+		&:after,
+		&:before {
+			content: '';
+			transition: 0.3s width 0.4s;
+		}
+
+		&:after {
+			top: 0px;
+			left: 0px;
+			margin-top: 0px;
+		}
+
+		&:before {
+			bottom: 0px;
+			right: 0px;
+			margin-bottom: 0px;
+		}
+
+		span {
+			top: 50%;
+			margin-top: -2px;
+			transition: transform 0.3s;
+			color: transparent;
+			font-size: 0;
+
+			&:before {
+				content: '';
+				background: $menu-button-color;
+				width:100%;
+				height: 3px;
+				border-radius:100px;
+				position:absolute;
+				left: 0;
+				transition: transform 0.3s ;
+			}
+		}
+		//span
+
+
+
+		&.is-active {
+
+			&:after {
+				transition: all 0.2s;
+				width:0%;
+				left:0px;
+			}
+
+			&:before {
+				transition: all 0.2s;
+				width:0%;
+				right:0px;
+			}
+
+			span {
+				transform:rotate(45deg);
+				transition: 0.3s transform 0.4s ;
+
+				&:before {
+					transform:rotate(-90deg);
+					transition: 0.3s transform 0.4s ;
+				}
+
+			}
+
+		}
+		// &.is-active
+
+	}
+	// END .menu-icon
+
+}

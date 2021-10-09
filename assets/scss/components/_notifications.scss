@@ -1,0 +1,230 @@
+.notification {
+	width: 100%;
+	max-width: 100%;
+	position: relative;
+	z-index: 101;
+	background: $color-e;
+	padding: 0.5rem 0;
+
+	&.is-top {
+	    transition: transform 0.5s ease, max-height 0.5s ease;
+	    // transform: translateY(0);
+	    max-height: 200px;
+
+	    &.is-hidden {
+		    // transform: translateY(-100px);
+	    } // &.is-hidden
+
+	    &.is-dismissed {
+	    	max-height: 0;
+	    	transform: translateY(-100px);
+	    	padding: 0;
+	    } // &.is-dismissed
+
+	    .notification__button {
+
+	    	@include breakpoint(small down) {
+	    		@include xy-cell($size: 5, $gutters: 0);
+	    		padding-right: 1.75rem;
+	    		text-align: center;
+	    	}
+
+	        a {
+
+	            @include breakpoint(small down) {
+			    	padding: 0.5rem 0.75rem;
+			    	font-size: 0.55rem;
+			    	letter-spacing: 0.033rem;
+			    	margin: 0 auto;
+	            }
+
+	        } // a
+
+	    } // .notification__button
+
+	    .notification__title {
+
+	        @include breakpoint(small down) {
+	        	@include xy-cell($size: 7, $gutters: 0);
+
+	        	span {
+		        	font: 600 0.75rem/1.5 $font-secondary;
+		        	padding-right: 0.33rem;
+		        	padding-left: 0.33rem;
+	        	} // span
+
+	        }
+
+	        .notification__title-icon {
+
+	            @include breakpoint(medium down) {
+	            	display: inline-block;
+	            }
+
+	            img {
+	                width: 25px;
+	            } // img
+
+	        } // .notification__title-icon
+
+	    } // .notification__title
+
+
+	} // &.is-top
+
+	&.is-bottom {
+	    position: fixed;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    transition: transform 0.5s ease, max-height 0.5s ease;
+	    max-height: 200px;
+
+	    &.is-hidden {
+	        // transform: translateY(100px);
+	    } // &.is-hidden
+
+	    &.is-dismissed {
+	    	max-height: 0;
+	    	transform: translateY(100px);
+	    	padding: 0;
+	    } // &.is-dismissed
+
+		.notification__title {
+			@include xy-cell($size: 12, $gutters: 0);
+			@include flex-align-self(middle);
+			width: auto;
+			flex: none;
+			text-align: right;
+			margin: 0;
+
+			@include breakpoint(medium down) {
+			}
+
+			@include breakpoint(small down) {
+				padding-right: 1rem;
+				text-align: center;
+				margin-bottom: 0.5rem;
+			}
+
+	    	span {
+
+		    	@include breakpoint(small down) {
+		    		padding: 0;
+		    		font: 400 0.9rem/1.33 $font-secondary;
+		    	}
+
+	    	} // span
+
+		} // .notification__title
+
+		.notification__title-icon {
+			@include flex-align-self(middle);
+			width: auto;
+
+		    img {
+		    	position: relative;
+			    width: auto;
+			    height: 20px;
+			    display: block;
+		    } // img
+
+		} // .notification__title-icon
+
+	    .notification__button {
+	    	@include xy-cell($size: 3, $gutters: 0);
+
+	        a {
+	        } // a
+
+	    } // .notification__button
+
+	} // &.is-bottom
+
+	&.is-hidden {
+	    opacity: 0;
+	    padding: 0 0;
+	    max-height: 0;
+	} // &.is-hidden
+
+	& > .container {
+	    justify-content: center;
+	    width: 100%;
+	    max-width: 100%;
+	    padding: 0 3rem;
+	    position: relative;
+
+	    @include breakpoint(medium down) {
+	    	padding: 0 2rem;
+	    }
+
+	} // & > .container
+
+	.notification__title {
+		@include xy-cell($size: 12, $gutters: 0);
+		@include flex-align-self(middle);
+		// display: inline-block;
+		width: auto;
+		flex: none;
+		text-align: right;
+		padding-right: 2rem;
+		font: 600 1.2rem/2 $font-secondary;
+		margin: 0;
+
+		span {
+			display: inline-block;
+			font: 400 0.9rem/1 $font-primary;
+		    @include flex-align-self(middle);
+		    padding-right: 1rem;
+		} // span
+
+	} // .notification__title
+
+	.notification__close {
+		@include flex;
+		position: absolute;
+		right: 1rem;
+		top: 50%;
+		width: 40px;
+		// background: rgba(0,0,0,0.1);
+		font-size: 1.5rem;
+		cursor: pointer;
+		z-index: 9999;
+		transform: translateY(-50%);
+		padding: 0;
+		background-color: transparent;
+		border: none;
+
+
+		@include breakpoint(medium down) {
+			right: 0.5rem;
+		}
+
+		@include breakpoint(small down) {
+			right: 0rem;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		svg {
+			position: relative;
+			@include flex-align-self(middle);
+			margin: 0 auto;
+			width: 25px;
+			height: 25px;
+			cursor: pointer;
+			transform: scale(1);
+			transition: all 0.25s ease;
+			z-index: 9999;
+
+			&:hover {
+				transform: scale(0.975);
+			}
+
+		}
+
+	} // .notification__close
+
+}

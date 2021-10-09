@@ -1,0 +1,13 @@
+/*
+Theme Name:         WP ACF Shop
+Theme URI:          https://github.com/areddxx/wp-acf-shop
+Description:        WordPress Shop Theme.
+Version:            1.0.0
+Author:             Austin Redd
+Author URI:         http://austinredd.com
+License: 			GNU General Public License v2 or later
+License URI: 		http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: 		wpst
+*/
+
+@import url('assets/css/min/app.min.css');

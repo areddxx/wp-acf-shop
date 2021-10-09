@@ -1,0 +1,100 @@
+body {
+    background-color: #00303C;
+}
+
+h1 a {
+    background-image:url('../img/logo.svg') !important;
+    margin-top: 100px !important;
+    background-size: 170px !important;
+    width: 170px !important;
+    height: 185px !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+#login {
+    padding-top: 5% !important;
+    width: 425px;
+}
+
+.login form {
+    border: none;
+    box-shadow:none;
+    background: transparent;
+}
+
+.login form .input,
+.login input[type=text] {
+    color: #FFFFFF;
+    background: transparent;
+    border:0;
+    border-bottom: 1px solid #ccc;
+    box-shadow:none;
+    border-radius: 0;
+    font: 400 1.15rem/1 'Nunito Sans';
+}
+
+input[type="submit"],
+.wp-core-ui .button-primary {
+    padding: 15px 40px;
+    background: #DAA900;
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+    text-shadow: none;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+     -webkit-transition: all 0.25s ease;
+     -o-transition: all 0.25s ease;
+     -moz-transition: all 0.25s ease;
+     transition: all 0.25s ease;
+     font: 700 0.8rem/1 'Nunito Sans';
+     letter-spacing: 0.1em;
+ }
+
+.wp-core-ui .button.button-large {
+    height: 40px;
+    line-height: 28px;
+    padding: 0 22px 2px;
+}
+
+input[type="submit"]:hover,
+.wp-core-ui .button-primary:hover {
+    background: #5B7E96;
+}
+
+div#login {
+    padding-top: 3% !important;
+}
+
+input[type="text"]:active,
+input[type="text"]:focus,
+.login form .input:active,
+.login form .input:focus,
+input[type="password"]:active,
+input[type="password"]:focus {
+    border-color: #DAA900;
+    box-shadow: none;
+}
+
+.login label {
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.85em;
+    font: 700 0.7rem/1 'Nunito Sans';
+}
+
+.login #backtoblog a,
+.login #nav a {
+    color: #FFFFFF;
+    font: 400 0.8rem/1 'Nunito Sans';
+}
+
+.login #backtoblog a:hover,
+.login #nav a:hover {
+    color: #DAA900;
+}

@@ -1,0 +1,34 @@
+.post__share {
+    margin: 0;
+    padding-top: 0.33rem;
+	align-item: flex-start;
+	height: auto;
+    width: 100%;
+
+    & > .post__share-link {
+    	@include xy-cell($size: 12, $gutters: 0);
+    	margin-bottom: 0.75rem;
+
+        &:last-of-type {
+            @include breakpoint(small down) {
+                margin-right: 0;
+            }
+        }
+
+        @include breakpoint(small down) {
+            flex: none;
+            margin-right: 1rem;
+        }
+
+    } // & > a
+
+    svg {
+    	width: 30px;
+    	height: auto;
+    } // svg
+
+    img {
+
+    } // img
+
+} // .post__share

@@ -1,0 +1,141 @@
+/*
+* Containers
+*/
+.is-flex {
+    @include xy-grid;
+} // .is-flex
+
+.container {
+	max-width: $global-width;
+	width: 100%;
+	margin: 0 auto;
+
+	@include breakpoint(large down) {
+	}
+
+	@include breakpoint(medium down) {
+		padding: 0 2rem;
+	}
+
+	@include breakpoint(small down) {
+		padding: 0 1.5rem;
+	}
+
+	&.is-large {
+	    max-width: 100%;
+	    padding: 0 3.5rem;
+	} // &.is-full
+
+	&.is-full {
+	    width: 100%;
+	    max-width: 100%;
+	} // &.is-full
+
+}
+
+/*
+* Fonts
+*/
+.weight-bold {
+    font-weight: 700;
+}
+
+.weight-normal {
+	font-weight: 400;
+}
+
+.weight-light {
+    font-weight: 300;
+} // .weight-light
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.align-left {
+	text-align: left;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.antialias {
+    -webkit-font-smoothing: antialiased;
+} // .antialias
+
+
+/*
+* Shadows
+*/
+.shadow {
+    box-shadow: 0 20px 20px -50px rgba(0,0,0,.35), 0 25px 60px -35px rgba(0,0,0,.35);
+}
+// .shadow
+
+.shadow--circle {
+    box-shadow: 0 10px 50px -20px rgba(0,0,0,.5), 0 15px 10px -35px rgba(0,0,0,.5);
+} // .shadow--circle
+
+.shadow--dark {
+	box-shadow: 0 10px 50px -30px rgba(0,0,0,.5), 0 20px 30px -20px rgba(0,0,0,.5);
+}
+
+
+/*
+* Embed.
+*/
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+
+    &.is-sitemap,
+    &.is-sightmap {
+
+    	@include breakpoint(medium down) {
+    		height: 90vh;
+    		padding-bottom: 0;
+    	}
+
+    	@include breakpoint(small down) {
+    		height: 95vh;
+    	}
+
+    } // &.is-sitemap,
+
+    iframe,
+    object,
+    embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    } // iframe
+
+} // .embed-container
+
+.is-loading {
+	width: 20px;
+	height: 20px;
+	z-index: 1;
+	background: transparent url('../../img/icon-loading-white.svg') no-repeat 50% 50% / 100%;
+	animation: spin 1.5s forwards infinite;
+    display: none;
+
+    &.is-dark {
+        background: transparent url('../../img/icon-loading-dark.svg') no-repeat 50% 50% / 100%;
+    } // &.is-dark
+
+	&.is-active {
+		display: block;
+	} // &.is-active
+
+} // .loading

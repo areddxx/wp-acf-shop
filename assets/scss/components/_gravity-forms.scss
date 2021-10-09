@@ -1,0 +1,131 @@
+.gform_wrapper {
+    width: 100%;
+    padding: 0;
+
+    form {
+        width: 100%;
+    } // form
+
+    .gform_body {
+        @include xy-grid;
+        width: 100%;
+        position: relative;
+    } // .gform_body
+
+    .gform_page {
+        width: 100%;
+        position: relative;
+    } // .gform_page
+
+    .gform_fields {
+        @include xy-grid;
+        padding: 0;
+        width: 100%;
+    } // .g_field
+
+    .gfield {
+        @include xy-cell($size: 12, $gutters: 0);
+        list-style: none;
+        margin-bottom: 1rem;
+        padding: 0 0.75rem;
+
+        &.is-half {
+            @include xy-cell($size: 6, $gutters: 0);
+            padding: 0 0.75rem;
+        } // &.is-half
+
+    } // .g_field
+
+    .gfield_checkbox {
+        list-style: none;
+        padding-left: 1.5rem;
+
+        label {
+            font: 400 0.9rem/1 $font-secondary;
+            color: $font-body;
+        } // label
+
+    } // .gfield_checkbox
+
+    .gf_name_has_2 {
+    	@include xy-grid;
+
+        span {
+            @include xy-cell($size: 6, $gutters: 0);
+            box-sizing: border-box;
+
+            &:first-of-type {
+            	padding-right: 0.33rem;
+            }
+
+            &:last-of-type {
+            	padding-left: 0.33rem;
+            }
+        } // span
+
+    } // .gf_name_has_2
+
+    .gfield_label,
+    label {
+        @include xy-cell($size: 12, $gutters: 0);
+        font: 600 1rem/1.2 $font-primary;
+    } // .gfield_label
+
+	.gform_page_footer {
+		padding: 1.5rem 0 0;
+		text-align: center;
+
+	    .button {
+	        min-width: 140px;
+	    } // .button
+	} // .gform_page_footer
+
+    .ginput_recaptcha  {
+        & > div {
+            margin: 0 auto;
+        } // & > div
+    } // .ginput_recaptcha
+
+	.gfield_visibility_hidden {
+		visibility: hidden;
+		display: none;
+	}
+
+} // .gform_wrapper
+
+// .gf_progressbar_wrapper {
+//     @include xy-cell($size: 12, $gutters: 0);
+//     margin: 0 auto 1.5rem;
+
+//     .gf_progressbar_title {
+//         font: 600 1.5rem/1.3 $font-primary;
+//         text-align: center;
+//     } // .gf_progressbar_title
+
+//     .gf_progressbar {
+//         @include xy-cell($size: 12, $gutters: 0);
+//         background: rgba($color-e, 0.05);
+//         padding: 0;
+//         border-radius: 40px;
+//     } // .gf_progressbar
+
+//     .gf_progressbar_percentage {
+//         @include xy-grid;
+//         background: $color-c;
+//         padding: 0.25rem 0.5rem;
+//         border-radius: 40px;
+//         margin: 0;
+
+//         span {
+//             display: inline-block;
+//             margin: 0 0;
+//             @include flex-align-self(middle);
+//             line-height: 1.25;
+//             transform: translateY(2px);
+//             padding-left: 0.5rem;
+//         } // span
+
+//     } // .gf_progressbar_percentage
+
+
+// } // .gf_progressbar_wrapper

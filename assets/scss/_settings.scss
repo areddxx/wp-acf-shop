@@ -1,0 +1,60 @@
+:root {
+	font-size: 100%;
+}
+
+//Fonts
+$font-primary: 'Roboto', helvetica, arial, sans-serif;
+$font-secondary: 'Open Sans', helvetica, arial, sans-serif;
+$font-body: #333;
+
+// Theme Colors
+$color-a: #457CF2;
+$color-b: #8578F5;
+$color-c: #4CCFA6;
+$color-d: #2A4D96;
+$color-e: #E9E9E9;
+$color-f: #FFFFFF;
+$color-g: #d8eef9;
+
+// Basic Colors
+$white: #FFFFFF;
+$black: #000000;
+
+// 3. The XY Grid
+$global-width: rem-calc(1200);
+$xy-grid: true;
+$grid-container: $global-width;
+$grid-container-max: $global-width;
+$xy-block-grid-max: 12;
+$grid-columns: 12;
+$grid-container-padding: 0;
+
+// Gutters
+$grid-margin-gutters: (
+	xsmall: 0,
+	small: 0,
+	medium: 0,
+	large: 0,
+	xlarge: 0,
+	xxlarge: 0,
+);
+
+$grid-padding-gutters: (
+	xsmall: 0,
+	small: 0,
+	medium: 0,
+	large: 0,
+	xlarge: 0,
+	xxlarge: 0,
+);
+
+// Breakpoints
+$breakpoints: (
+	xsmall: 0,
+	small: 480px,
+	medium: 768px,
+	large: 1024px,
+	xlarge: 1200px,
+	xxlarge: 1440px,
+);
+$breakpoint-classes: (xsmall small medium large xlarge xxlarge);

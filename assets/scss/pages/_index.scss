@@ -1,0 +1,125 @@
+body.index,
+body.search,
+body.archive {
+
+    .page-wrap {
+
+        & > .container {
+            max-width: 50rem;
+
+            @include breakpoint(small down) {
+                max-width: 100%;
+            }
+
+        } // & > .container
+
+    } // .page-wrap
+
+    .content-area {
+        @include xy-cell($size: 12, $gutters: 0);
+
+        @include breakpoint(small down) {
+            @include xy-cell($size: 12, $gutters: 0);
+            padding-top: 1.5rem;
+        }
+
+    }
+    // .page__content
+
+    .sidebar {
+        display: none;
+    } // .sidebar
+
+
+}
+
+
+body.index,
+body.search,
+body.archive {
+
+    // Post
+    .post {
+        @include xy-cell($size: 12, $gutters: 0);
+        margin: 0 auto;
+        background: $color-f;
+        border-bottom: 1px solid #F0F0F0;
+        padding: 2.5rem 0;
+
+        &:first-of-type {
+            padding-top: 0;
+        }
+
+    }
+
+    .post__body {
+        @include xy-cell($size: 12, $gutters: 0);
+    } // .post__body
+
+    .post__image {
+        @include xy-cell($size: 12, $gutters: 0);
+
+        img {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+    }
+    // .post__image
+
+    .post__title {
+        @include xy-cell($size: 12, $gutters: 0);
+        margin: 1rem 0 1rem;
+        transition: all 0.25s ease;
+        color: $font-body;
+
+        & > a {
+            color: $font-body;
+        } // & > a
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+    }
+    // .post__title
+
+    .post__meta {
+        // scss/components/_post-meta.scss
+    } // .post__meta
+
+    .post__content {
+        @include xy-cell($size: 12, $gutters: 0);
+        margin-top: 0.25rem;
+
+        p {
+            color: $font_body;
+            letter-spacing: 0;
+        }
+
+    }
+    // .post__content
+
+    .post__link {
+        @include xy-cell($size: 12, $gutters: 0);
+        padding: 0;
+
+        a {
+        } // a
+
+    }
+    // .post__readmore
+
+}
+// .index
+
+body.search {
+    .post  {
+        border-bottom: 1px solid #e2e2e2;
+        padding-bottom: 2rem;
+        margin-bottom: 4rem;
+    }
+    // .post
+}

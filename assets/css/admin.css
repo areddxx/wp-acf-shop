@@ -1,0 +1,21 @@
+#wpadminbar #wp-admin-bar-wp-logo,
+#wpadminbar #wp-admin-bar-comments,
+#wpadminbar #wp-admin-bar-customize {
+	display: none;
+}
+#wpadminbar #wp-admin-bar-site-name>.ab-item:before {
+	background-image: url('../img/built-by-logo.png') !important;
+	height: 20px;
+	width: auto;
+	background-position: 50%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	color: rgba(0,0,0,0);
+}
+#wpadminbar #wp-admin-bar-site-name > .ab-item {
+	font-weight: 600;
+	color: #ffffff;
+}
+#footer-left > a {
+	text-decoration: none;
+}

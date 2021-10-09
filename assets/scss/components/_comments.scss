@@ -1,0 +1,225 @@
+.comments {
+    width: 100%;
+    position: relative;
+
+    & > .container {
+        @include xy-cell($size: 12, $gutters: 0);
+        position: relative;
+        margin: 2.5em auto 0;
+        padding: 2.5rem 4rem;
+        background: #FBFBFB;
+
+        @include breakpoint(small down) {
+            width: 100%;
+            padding: 1rem 0 2rem;
+            padding-left: calc((100% / 12) * 0.75);
+            padding-right: calc((100% / 12) * 0.75);
+        }
+
+    } // & > .container
+
+}
+
+.comments__list,
+.comment-list {
+    @include xy-cell($size: 12, $gutters: 0);
+    padding-left: 0;
+} // .comments__list
+
+.comment {
+    @include xy-cell($size: 12, $gutters: 0);
+    list-style: none;
+
+    & > .children {
+        padding: 0;
+
+        & > .comment {
+            padding: 2rem 0 2rem 5rem;
+        } // & > .comment
+
+    } // & > .children
+
+} // .comment
+
+.comment__body {
+    @include xy-cell($size: 12, $gutters: 0);
+} // .comment__body
+
+.comment__author {
+    margin: 0 1rem 0 0;
+} // .comment__author
+
+.comment__author-avatar {
+    @include flex-align-self(middle);
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+
+    .avatar {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: $color-a;
+        display: block;
+    } // .avatar
+
+} // .comment__author-avatar
+
+.comment__author-details {
+    @include flex-align-self(middle);
+} // .comment__author-datails
+
+.comment__author-name {
+    @include xy-cell($size: 12, $gutters: 0);
+    font: 400 1.2rem/1.5 $font-primary;
+
+    a {
+        color: $font_body;
+    } // a
+
+} // .comment__author-name
+
+.comment__meta {
+    @include xy-cell($size: 12, $gutters: 0);
+    font: 400 0.7rem/1.25 $font-secondary;
+
+    a {
+        color: $font_body;
+    } // a
+
+} // .comment__meta
+
+
+.comment__bottom {
+    @include xy-cell($size: 12, $gutters: 0);
+    padding: 1rem 0 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    margin: 0 0 2rem;
+} // .comment__bottom
+
+.comment__interactions {
+    @include xy-grid;
+    position: relative;
+    width: 100%;
+    margin-top: 1.5rem;
+
+    .reply,
+    .like,
+    .likes {
+        font: 600 0.625rem/1 $font-primary;
+        color: black;
+        text-transform: uppercase;
+
+        a {
+            font: 600 0.625rem/1 $font-primary;
+            color: black;
+            text-transform: uppercase;
+        } // a
+
+    } // .reply,
+
+    .reply {
+        @include xy-grid;
+        @include flex-align-self(middle);
+        margin: 0;
+        margin-right: 2rem;
+
+        svg {
+            @include flex-align-self(middle);
+            width: 22px;
+            height: auto;
+            margin-right: 0.25rem;
+        } // svg
+
+        a {
+            @include flex-align-self(middle);
+        } // a
+    } // .reply
+
+    .like {
+        @include xy-grid;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        display: none;
+
+        &.is-active {
+            display: flex;
+        } // &.is-active
+
+        .count {
+            @include flex-align-self(middle);
+            font: 600 0.625rem/1 $font-primary;
+            text-transform: uppercase;
+            @include flex-align-self(middle);
+            margin-left: 0.25rem;
+            color: black;
+        }
+
+
+        svg {
+            @include flex-align-self(middle);
+            width: 22px;
+            height: auto;
+            margin-right: 0.25rem;
+        } // svg
+
+    } // .likes
+
+    .likes {
+        @include xy-grid;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        .count {
+            @include flex-align-self(middle);
+            font: 600 0.625rem/1 $font-primary;
+            margin-right: 0.65rem;
+            color: black;
+        }
+
+        svg {
+            @include flex-align-self(middle);
+            width: 22px;
+            height: auto;
+            margin-right: 0.25rem;
+        } // svg
+
+    } // .likes
+
+} // .comment__interactions
+
+.comment-respond {
+    // @include xy-grid;
+    @include xy-cell($size: 12, $gutters: 0);
+} // .comment-respond
+
+.comment-reply-title {
+    margin: 0;
+} // .comment-reply-title
+
+.comments__form {
+    @include xy-grid;
+
+    .comment-form-comment {
+        @include xy-cell($size: 12, $gutters: 0);
+    } // .comment-form-comment
+
+    .input-name {
+        @include xy-cell($size: 6, $gutters: 0);
+        padding-right: 0.25rem;
+    } // .input-name
+
+    .input-email {
+        @include xy-cell($size: 6, $gutters: 0);
+        padding-left: 0.25rem;
+    } // .input-email
+
+    .form-submit {
+        margin-top: 0.5rem;
+    } // .form-submit
+
+} // .comments__form

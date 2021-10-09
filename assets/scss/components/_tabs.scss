@@ -1,0 +1,12 @@
+.tabs-nav-item {
+
+} // .tabs-nav-item
+
+.tabs-content-item {
+    display: none;
+
+    &.is-active {
+        display:block;
+    } // &.is-active
+
+} // .tabs-content-item

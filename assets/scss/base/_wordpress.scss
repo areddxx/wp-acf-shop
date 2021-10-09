@@ -1,0 +1,29 @@
+.aligncenter {
+	display: block;
+	margin: 0 auto;
+}
+
+.alignleft {
+	display: block;
+	margin: 0 1rem 1rem 0;
+	float: left;
+}
+
+.alignright {
+	display: block;
+	margin: 0 0 1rem 1rem;
+	float: right;
+}
+
+#player {
+	display: block;
+    margin: 1rem 0;
+} // #player
+
+.wp-caption {
+    max-width: 100%;
+} // .wp-caption
+
+.wp-caption-text {
+    text-align: center;
+} // .wp-caption-text
